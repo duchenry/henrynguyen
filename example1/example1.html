@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example1</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <i class="far fa-sun"></i>
+                <input type="range" id="range" min="10" max="100" value="50">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+        <script>
+            rangeInput = document.getElementById("range");
+            container = document.getElementsByClassName("container")[0];
+            /*[0] la truy cap vao div co class la container, neu nhu class container 
+            co nhieu cac the div khac thi khi truy cap cac the div tiep theo ta se truy
+            cap nhu phan tu*/
+
+            rangeInput.addEventListener("click", function(){
+                container.style.filter = "brightness(" + rangeInput.value + "%)";
+            })
+        </script>
+    </body>
+</html>

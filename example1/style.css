@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url("anh.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 300px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box i{
+    margin: 0 10px;
+}
+#range {
+    width: 100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: blue;
+    height: 4px;
+    outline: none;
+}
+
+#range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}/*bi loi khong thuc hien duoc thanh keo*/
+
