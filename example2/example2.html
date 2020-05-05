@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bar">
+            <i class="far fa-sun"></i>
+            <input type="range" id="range" min="10" max="100" value="40">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="container1">
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <h3>message</h3>
+                <span>duchenry2601@gmail.com</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <h3>phone</h3>
+                <span>+84- 333036247</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>address</h3>
+                <span>220 Ba Trieu</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        valueInput = document.getElementById('range');
+        change = document.getElementsByClassName('container')[0];
+
+        valueInput.addEventListener("click", function() {
+            change.style.filter = "brightness(" + valueInput.value + "%)";
+        })
+    </script>
+</body>
+
+</html>
