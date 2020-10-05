@@ -1,0 +1,61 @@
+const numbers = [1, 2, 3, 4, 5];
+try {
+  if ((numbers[2] = 8)) {
+    throw new SyntaxError("It is not your number");
+  }
+} catch (e) {
+  console.log("Error! You should check your data." + e.message);
+} finally {
+  console.log("It always runs");
+}
+//try, catch, finally
+//try is used to check your var, state or st .If st wrongs,
+//catch will do st to show the error.
+//finally always does
+
+try {
+  try {
+    throw new Error("ohh!");
+  } catch (e) {
+    //just catch one time, catch first try
+    console.error("dead..." + e.message);
+    throw e; //throw error in order to catch error again below
+  } finally {
+    console.log("It worked!!!");
+  }
+} catch (e) {
+  //catch e again
+  console.error("Again: " + e.message);
+}
+
+//Returning from a finally-block
+(function () {
+  try {
+    try {
+      throw new Error("Virus");
+    } catch (e) {
+      console.error("This is " + e.message);
+      throw e; //throw e again
+    } finally {
+      console.log("this is it!!!");
+      return;
+    }
+  } catch (e) {
+    console.error(e.message); //is not used
+  }
+})(); //IIFE(immediate function)
+
+//conditional catch-blocks
+try {
+  routine();
+} catch (e) {
+  if (e instanceof TypeError) {
+    console.error("Type is not accepted");
+  } else if (e instanceof RangeError) {
+    console.error("Range is not accepted");
+  } else if (e instanceof EvalError) {
+    console.error("Eval is not accepted");
+  } else {
+    console.error("Virus")
+  }
+}

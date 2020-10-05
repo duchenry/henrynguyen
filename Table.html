@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <style>
+      #tb1 {
+        border: 1px solid black; /*set the border for the whole table*/
+        border-spacing: 10px;
+        border-collapse: collapse;
+        /*set whether table borders should collapse into a single table*/
+      }
+      #tb2 {
+        border: 2px solid blue;
+        border-spacing: 9px;
+      }
+      th,
+      td {
+        border: 2px solid black;
+      }
+      td {
+        padding: 7px;
+      }
+    </style>
+  </head>
+  <body>
+      <caption>Table 1</caption>
+    <table id="tb1">
+      <tr>
+        <!--table row-->
+        <th>Name</th>
+        <!--table header-->
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Nguyen Manh Duc</td>
+        <!--table data-->
+        <td>23</td>
+      </tr>
+    </table>
+    <br><br>
+    <caption>Table 2</caption>
+    <table id="tb2">
+      <tr>
+        <th style="text-align: left;">Date</th>
+        <th colspan="3" style="text-align: left;">Participants</th>
+      </tr>
+      <tr>
+        <td>28/09/2020</td>
+        <td>Nguyen Manh Duc</td>
+        <td>Nguyen Viet Anh</td>
+        <td>Nguyen Tuan Manh</td>
+      </tr>
+    </table>
+    <br><br>
+    <caption>Table 3</caption>
+    <table>
+        <tr id="tb3">
+            <th rowspan="2">Name</th>
+            <!--divide td row into 2-->
+            <td>Nguyen Manh Duc</td>
+            <!--not add td here because it will continue
+            to add to the new column not row-->
+        </tr>
+        <tr>
+            <td>Nguyen Ly</td>
+            <!--Nguyen Ly will appear to the row with 
+                Nguyen Manh Duc-->
+        </tr>
+
+    </table>
+  </body>
+</html>

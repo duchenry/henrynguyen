@@ -1,0 +1,30 @@
+//Promise is used to make an async function
+var start = 0;
+function testPromise() {
+  var number = ++start;
+  console.log(number + " :Start sync func");
+  //start a normal sync
+  var pm = new Promise(function (resolve, reject) {
+    console.log(number + " :Start async func");
+    //start an async func, and then comes to resolve(),
+    //if resolve check the number right, immediately comes
+    //to console2, wait the other function run. When all
+    //function run completely, console1 run
+    window.setTimeout(function () {
+      resolve(number);
+    }, Math.random() * 2000 + 1000);//make a time random
+  });
+  pm.then(function (value) {//value = number
+    console.log(value + " :Promise fulfilled-Async func terminated");
+  });
+  //console1
+  pm.catch(function (reason) {
+    console.error(reason);
+  });
+  console.log(number + " :Promise - sync func terminated");
+  //console2
+}
+
+testPromise();
+testPromise();
+testPromise();

@@ -1,0 +1,37 @@
+
+h1 { 
+    width: 200px;
+    border: 2px dotted #f17e7e;
+    border-radius: 5px;
+    padding: 3px 4px;
+    text-align: center;
+    white-space: normal;
+}
+.glyphicon glyphicon-cloud {
+    size: 50px;
+}
+
+a:link, a:visited {
+    background-color: rgb(159, 235, 61);
+    text-align: center;
+    color: rgb(247, 89, 89);
+    display: inline-block;
+}
+/*link is a state that runs when u come to a web u never access to
+other call: unvisited*/
+a:hover {
+    background-color: wheat;
+    text-decoration: underline;
+    color: rgb(19, 26, 26);
+}
+/*when mouse over link*/
+a:active {
+    color: grey;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+.abc {
+    list-style-image: url("");
+}

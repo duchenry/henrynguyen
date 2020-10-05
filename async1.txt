@@ -1,0 +1,28 @@
+const btn1 = document.querySelector(".date");
+const btn2 = document.querySelector(".canvas");
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+
+
+function clickToDraw() {
+  for (let i = 0; i < 1000000; i++) {
+    ctx.fillStyle = "rgba(0,0,255, 0.2)";
+    ctx.beginPath();
+    ctx.arc(100,25,10,0,2*Math.PI);
+    ctx.fill();
+  }
+}
+
+btn1.addEventListener("click", () => {
+  let myDate;
+  for (let i = 0; i < 10000000; i++) {
+    let date = new Date();
+    myDate = date;
+  }
+  console.log(myDate);
+  let pShow = document.createElement("p");
+  pShow.textContent = "Hello World this is my house";
+  document.body.appendChild(pShow);
+});
+btn2.addEventListener("click", clickToDraw);
