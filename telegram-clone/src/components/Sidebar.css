@@ -1,0 +1,33 @@
+.sidebar {
+  display: flex;
+  flex: .25; /* display sidebar with 25% width view */
+  flex-direction: column;
+  height: 100vh; /* vh: view height 100=100%*/
+  border-right: 4px solid rgba(71, 22, 22, 0.1);
+}
+.sidebar__header {
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  align-items: center;
+}
+
+.sidebar__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: #2d4671;
+  color: white;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.sidebar__input {
+  border: none;
+  background-color: transparent;/* make the same color as parent color */
+outline-width: 0;
+color: white;
+flex: 1;
+}
+
